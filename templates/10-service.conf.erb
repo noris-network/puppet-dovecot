@@ -1,0 +1,23 @@
+service <%= @service %> {
+<% unless @inet_listener.nil? 
+    @inet_listener.each do |listener,options| -%>
+  inet_listener <%= listener %> {
+<%   options.each do |option,value| -%>
+    <%= option %> = <%= value %>
+<%   end -%>
+  }
+<%  end -%>
+<% end -%>
+<% unless @process_limit.nil? -%>
+  process_limit = <%= @process_limit %>
+<% end -%>
+<% unless @vsz_limit.nil? -%>
+  vsz_limit     = <%= @vsz_limit %>
+<% end -%>
+<% unless @service_count.nil? -%>
+  service_count = <%= @service_count %>
+<% end -%>
+<% unless @client_limit.nil? -%>
+  client_limit  = <%= @client_limit %>
+<% end -%>
+}

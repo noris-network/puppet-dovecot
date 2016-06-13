@@ -1,0 +1,28 @@
+<% 
+ def bool_param(parameter,value)
+  unless value.nil?
+   if value
+    return parameter + " = yes\n"
+   end 
+   return parameter + " = no\n"
+  end
+ end
+-%>
+<%= bool_param("disable_plaintext_auth",@disable_plaintext_auth) -%>
+<%= bool_param("dotlock_use_excl",@dotlock_use_excl) -%>
+<%= bool_param("verbose_proctitle",@verbose_proctitle) -%>
+<%= bool_param("shutdown_clients",@shutdown_clients) -%>
+<%= bool_param("mmap_disable",@mmap_disable) -%>
+<%= bool_param("mail_nfs_storage",@mail_nfs_storage) -%>
+<%= bool_param("mail_nfs_index",@mail_nfs_index) -%>
+<%= bool_param("mail_debug",@mail_debug) -%>
+<% unless @mail_fsync.nil? -%>
+mail_fsync = <%= @mail_fsync %>
+<% end -%>
+<% unless @protocols.nil? -%>
+protocols = <%= @protocols.join(" ") %>
+<% end -%>
+<% unless @mail_plugins.nil? -%>
+mail_plugins = <%= @mail_plugins.join(" ") -%>
+<% end -%>
+

@@ -1,0 +1,13 @@
+protocol <%= @protocol %> {
+<% unless @lmtp_save_to_detail_mailbox.nil? -%>
+  <% if @lmtp_save_to_detail_mailbox -%>
+lmtp_save_to_detail_mailbox   = yes
+  <% else -%>
+lmtp_save_to_detail_mailbox   = no
+  <% end -%>
+<% end -%>
+<% unless @mail_max_userip_connections.nil? -%>
+  mail_max_userip_connections = <%= @mail_max_userip_connections %>
+<% end %>
+  mail_plugins                = <%= @mail_plugins.join(" ") %>
+}

@@ -1,0 +1,29 @@
+plugin {
+<% unless @acl.nil? -%>
+  acl = <%= @acl %>
+<% end -%>
+<% unless @mail_log_events.nil? -%>
+  mail_log_events = <%= @mail_log_events.join(" ") %>
+<% end -%>
+<% unless @mail_log_fields.nil? -%>
+  mail_log_fields = <%= @mail_log_fields.join(" ") %>
+<% end -%>
+<% unless @lazy_expunge.nil? -%>
+  lazy_expunge = <%= @lazy_expunge %>
+<% end -%>
+<% unless @recipient_delimiter.nil? -%>
+  recipient_delimiter = <%= @recipient_delimiter %>
+<% end -%>
+<% unless @sieve.nil? -%>
+  sieve               = <%= @sieve %>
+<% end -%>
+<% unless @sieve_dir.nil? -%>
+  sieve_dir           = <%= @sieve_dir %>
+<% end -%>
+<% unless @sieve_extensions.nil? -%>
+  sieve_extensions    = <%= @sieve_extensions.join(" ") %>
+<% end -%>
+<% unless @sieve_max_redirects.nil? -%>
+  sieve_max_redirects = <%= @sieve_max_redirects %>
+<% end -%>
+}

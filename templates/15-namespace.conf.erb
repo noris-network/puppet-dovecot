@@ -1,0 +1,24 @@
+<%
+ def bool_param(parameter,value)
+  unless value.nil?
+   if value
+    return parameter + " = yes\n"
+   end
+   return parameter + " = no\n"
+  end
+ end
+-%>
+namespace <%= @title %> {
+<%= bool_param("  list  ",@list  ) -%>
+<%= bool_param("  inbox ",@inbox ) -%>
+<%= bool_param("  hidden",@hidden) -%>
+<% unless @location.nil? -%>
+  location = <%= @location %>
+<% end -%>
+<% unless @prefix.nil? -%>
+  prefix = <%= @prefix %>
+<% end -%>
+<% unless @separator.nil? -%>
+  separator = <%= @separator %>
+<% end -%>
+}

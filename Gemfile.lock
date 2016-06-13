@@ -1,0 +1,82 @@
+GIT
+  remote: https://github.com/rodjek/rspec-puppet.git
+  revision: 79d5373dcbfa4cd56c863f9e9ffe8f3b5e02b8a0
+  specs:
+    rspec-puppet (2.4.0)
+      rspec
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    CFPropertyList (2.2.8)
+    diff-lcs (1.2.5)
+    docile (1.1.5)
+    facter (2.4.4)
+    facterdb (0.3.5)
+      facter
+      jgrep
+    hiera (3.0.5)
+      json_pure
+    jgrep (1.4.1)
+      json
+    json (1.8.3)
+    json_pure (1.8.3)
+    mcollective-client (2.8.4)
+      json
+      stomp
+      systemu
+    metaclass (0.0.4)
+    mocha (1.1.0)
+      metaclass (~> 0.0.1)
+    puppet (4.3.0)
+      facter (> 2.0, < 4)
+      hiera (>= 2.0, < 4)
+      json_pure
+    puppet-lint (1.1.0)
+    puppet-syntax (2.0.0)
+      rake
+    puppetlabs_spec_helper (1.0.1)
+      mocha
+      puppet-lint
+      puppet-syntax
+      rake
+      rspec-puppet
+    rake (10.4.2)
+    rspec (3.4.0)
+      rspec-core (~> 3.4.0)
+      rspec-expectations (~> 3.4.0)
+      rspec-mocks (~> 3.4.0)
+    rspec-core (3.4.4)
+      rspec-support (~> 3.4.0)
+    rspec-expectations (3.4.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.4.0)
+    rspec-mocks (3.4.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.4.0)
+    rspec-puppet-facts (1.6.1)
+      facter
+      facterdb (>= 0.3.0)
+      json
+      mcollective-client
+      puppet
+    rspec-support (3.4.1)
+    simplecov (0.11.2)
+      docile (~> 1.1.0)
+      json (~> 1.8)
+      simplecov-html (~> 0.10.0)
+    simplecov-html (0.10.0)
+    stomp (1.4.0)
+    systemu (2.6.5)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  puppet
+  puppet-lint
+  puppetlabs_spec_helper
+  rake
+  rspec-puppet!
+  rspec-puppet-facts
+  simplecov

@@ -1,0 +1,9 @@
+# passdb: <%= @title %> 
+<%= @type %> {
+<% unless @driver.nil? %>
+  driver = <%= @driver %>
+<% end %>
+<% unless @args.nil? %>
+  args   = <%= @args %>
+<% end %>
+}

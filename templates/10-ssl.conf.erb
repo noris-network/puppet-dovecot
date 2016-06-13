@@ -1,0 +1,6 @@
+<% unless @ssl_cert.nil? -%>
+ssl_cert = <<%= @ssl_cert %>
+<% end -%>
+<% unless @ssl_key.nil? -%>
+ssl_key = <<%= @ssl_key %>
+<% end -%>
