@@ -8,7 +8,7 @@ class dovecot::config {
   $ssl_key                      = $dovecot::ssl_key
   $ssl_cert                     = $dovecot::ssl_cert
   $protocols                    = $dovecot::protocols
-  $mail_plugins	                = $dovecot::mail_plugins
+  $mail_plugins                 = $dovecot::mail_plugins
   $mail_fsync                   = $dovecot::mail_fsync
   $verbose_proctitle            = $dovecot::verbose_proctitle
   $shutdown_clients             = $dovecot::shutdown_clients
